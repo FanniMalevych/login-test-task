@@ -8,7 +8,7 @@ import { useEffect } from 'react';
 
 export default function SignUpSide() {
     const navigate = useNavigate()
-    const token = useSelector((state) => state.auth.token);
+    const token = useSelector((state: any) => state.auth.token);
     const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
