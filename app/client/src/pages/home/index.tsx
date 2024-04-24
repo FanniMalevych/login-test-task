@@ -7,7 +7,7 @@ import { authService } from '../../store/slices/authService';
 
 function Home () {
     const navigate = useNavigate()
-    const token = useSelector((state) => state.auth.token);
+    const token = useSelector((state: any) => state.auth.token);
     const handleClick = () => {
         navigate('/')
         authService.signOut()

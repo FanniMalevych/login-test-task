@@ -11,7 +11,7 @@ export const authService = {
             setToken(response.data.accessToken);
             store.dispatch(signInSuccess(response.data))
             return response.data;
-        } catch(error) {
+        } catch(error: any) {
             store.dispatch(signInFailed(error.response.data.message))
         }
     },
@@ -22,7 +22,7 @@ export const authService = {
             setToken(response.data.accessToken);
             store.dispatch(signUpSuccess(response.data))
             return response.data;
-        } catch(error) {
+        } catch(error: any) {
             store.dispatch(signUpFailed(error.message))
         }
     },
