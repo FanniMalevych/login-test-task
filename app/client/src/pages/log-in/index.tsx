@@ -33,6 +33,12 @@ export default function SignInSide() {
   
 
   return (
-    <Form title='Sign in' submitFunc={handleSubmit} addText="Don't have an account? Sign Up" navigate='/signup'/>
+    <Form 
+        title='Sign in'     
+        submitFunc={handleSubmit} 
+        additionalText="Don't have an account? Sign Up" 
+        navigate='/signup'
+        errorText={errorMsg}
+    />
   );
 }
