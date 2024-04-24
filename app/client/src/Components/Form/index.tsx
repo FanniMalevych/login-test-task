@@ -29,7 +29,7 @@ export default function Form(formData: IFormData) {
   const [email, setEmail] = useState("");
   const [passError, setPassError] = useState('');
   const [password, setPassword] = useState("");
-  const handleEmailChange = e => {
+  const handleEmailChange = (e: { target: { value: string }; }) => {
     setEmail(e.target.value);
     if (validate) {
         if (!/^[a-zA-Z0-9._:$!%-]+@[a-zA-Z0-9.-]+.[a-zA-Z]$/.test(e.target.value)) {
@@ -40,7 +40,7 @@ export default function Form(formData: IFormData) {
     }
   };
 
-  const handlePasswordChange = e => {
+  const handlePasswordChange = (e: { target: { value: string }; }) => {
     setPassword(e.target.value)
     if(validate) {
         if(!/^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/.test(e.target.value)) {

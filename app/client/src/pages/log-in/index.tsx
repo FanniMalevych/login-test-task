@@ -21,8 +21,8 @@ export default function SignInSide() {
 
   };
   
-  const token = useSelector((state) => state.auth.token);
-  const errorMsg = useSelector(state => state.auth.errorMsg)
+  const token = useSelector((state: any) => state.auth.token);
+  const errorMsg = useSelector((state: any) => state.auth.errorMsg)
   
   useEffect(() => {
     if (token) {
